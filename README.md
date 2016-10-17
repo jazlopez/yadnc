@@ -1,4 +1,4 @@
-# YADNC - Yet another domain name checker
+# YADNC - Yet Another Domain Name Checker
 
 ## Purpose
 Basic implementation containing a Domain Name Checker class along a test implementation example. 
