@@ -1,7 +1,109 @@
-<h1>YADNC - Yet Another Domain Name Checker</h1>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>YADNC by jazlopez</title>
 
-<h2>Purpose</h2>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>YADNC</h1>
+        <p>Yet Another Domain Name Checker</p>
+
+        <p class="view"><a href="https://github.com/jazlopez/yadnc">View the Project on GitHub <small>jazlopez/yadnc</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/jazlopez/yadnc/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/jazlopez/yadnc/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/jazlopez/yadnc">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="yadnc---yet-another-domain-name-checker" class="anchor" href="#yadnc---yet-another-domain-name-checker" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>YADNC - Yet Another Domain Name Checker</h1>
+
+<h2>
+<a id="purpose" class="anchor" href="#purpose" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Purpose</h2>
 
 <p>Basic implementation containing a Domain Name Checker class along a test implementation example. </p>
 
 <p>The goal of Domain Name Checker class is to run domain availability lookup on <b>.com, .org, .net, .info, .biz, .mx </b> extensions.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<ol>
+<li><p>You may want to clone the repository and run an instance of PHP web built-in server</p></li>
+<li><p>Make sure to send a <code>name</code> variable either in a GET/POST request when calling in the script.</p></li>
+</ol>
+
+<h3>
+<a id="clone-the-code" class="anchor" href="#clone-the-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Clone the code</h3>
+
+<pre><code># clone the code
+$git clone https://github.com/jazlopez/yadnc.git
+</code></pre>
+
+<h3>
+<a id="test" class="anchor" href="#test" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test</h3>
+
+<pre><code># run a built in web server
+$php -S localhost:8085 -t yadnc
+</code></pre>
+
+<h3>
+<a id="verify" class="anchor" href="#verify" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Verify</h3>
+
+<p>Open up a brower and type in http://localhost:8085/domain-name-checker?name=domain-without-extension</p>
+
+<h2>
+<a id="response" class="anchor" href="#response" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Response</h2>
+
+<p>It returns a json array indicating extension avaialibity for the requested name.</p>
+
+<pre><code>{"response":["domain-without-extension.com is available","domain-without-extension.net is available","domain-without-extension.org is available","domain-without-extension.us is available","domain-without-extension.biz is available","domain-without-extension.info is available"]}
+</code></pre>
+
+<h2>
+<a id="exception" class="anchor" href="#exception" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Exception</h2>
+
+<p>In the case of any error it throws a 400 Exception containing the error description.</p>
+
+<pre><code>
+{"error":"Domain name cannot be empty, \/Users\/me\/yadnc\/domain-name-checker.php:185"}
+
+</code></pre>
+
+<h2>
+<a id="contact-support" class="anchor" href="#contact-support" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contact Support</h2>
+
+<p>Jaziel Lopez</p>
+
+<p>Experienced Software Developer, </p>
+
+<p>Tijuana Area, Mexico, 2016</p>
+
+<p><a href="mailto:%20juan.jaziel@gmail.com"></a><a href="mailto:juan.jaziel@gmail.com">juan.jaziel@gmail.com</a> | <a href="http://jlopez.mx"></a><a href="http://jlopez.mx">http://jlopez.mx</a> | <a href="http://linkedin.com/in/jlopezmx"></a><a href="http://linkedin.com/in/jlopezmx">http://linkedin.com/in/jlopezmx</a></p>
+
+<blockquote>
+<p>Improvements and recommendations are well appreciated. Feel free to fork and use.</p>
+</blockquote>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/jazlopez">jazlopez</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
